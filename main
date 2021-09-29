@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -13,8 +14,9 @@ public class Main {
         System.out.println("Введите количество елементов в масиве =");
         int a = in.nextInt();
         int[] array = new int [a];
+        Random random = new Random();
         for (int i = 0; i < array.length; i++){
-            array[i] = (int)(Math.random()*30);
+            array[i] = random.nextInt(30)+1;
             System.out.println(array[i]);
         }
         System.out.println("Введите начальную границу для поиска суми в масиве =");
