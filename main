@@ -1,0 +1,43 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println(summArray());
+    }
+    public static int summArray(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите количество елементов в масиве =");
+        int a = in.nextInt();
+        int[] array = new int [a];
+        for (int i = 0; i < array.length; i++){
+            array[i] = (int)(Math.random()*30);
+            System.out.println(array[i]);
+        }
+        System.out.println("Введите начальную границу для поиска суми в масиве =");
+        int k = in.nextInt();
+        while (k >= a){
+            System.out.println("Введите коректное значение для k =");
+            k = in.nextInt();
+        }
+        System.out.println("Введите конечную границу для поиска суми в масиве =");
+        int l = in.nextInt();
+        while (k >= l){
+            System.out.println("Введите коректное значение для k =");
+            k = in.nextInt();
+        }
+        while (l > a){
+            System.out.println("Введите коректное значение для l =");
+            l = in.nextInt();
+        }
+        int sum = 0;
+        for (int i = k; i < l; i++){
+            sum = sum + array[i];
+        }
+        System.out.println("sum = " + sum);
+        return 0;
+    }
+}
